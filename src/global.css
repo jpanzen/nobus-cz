@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.text-gradient {
+		background-image: radial-gradient(circle at top, rgba(255, 255, 255, 1), rgba(171, 219, 255, 1));
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	  }
+}

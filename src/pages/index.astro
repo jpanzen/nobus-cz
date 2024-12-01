@@ -1,0 +1,28 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Notification from "../components/Notification.astro";
+import Base from "../layouts/Base.astro";
+---
+
+<Base>
+	<div class="px-14 text-white bg-headerGradient">
+		<Navigation />
+		<header class="flex flex-col gap-8 py-3 h-[474px] justify-center items-center">
+			<div class="flex flex-col gap-[10px] items-center font-black">
+				<p>Jsme NOBUS</p>
+				<h1 class="text-[56px] uppercase line leading-tight text-gradient">Na tuhle klimu<br>se spolehněte</h1>
+			</div>
+			<div class="flex flex-col gap-10 items-center">
+				<p class="max-w-[444px] text-center">Nobus klimatizace přináší rychlé chlazení i vytápění, stylový design pro každý interiér a snadnou instalaci. Vysoká kvalita za dostupnou cenu, vždy skladem v ČR.</p>
+				<div class="flex flex-row gap-5 font-semibold">
+					<a href="" class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]">Odebírejte nás</a>
+					<a href="" class="text-white bg-buttonGradient px-5 py-[10px] rounded-[3px] relative">
+						O produktech
+					</a>
+				</div>
+			</div>
+		</header>
+	</div>
+	<Notification />
+	
+</Base>

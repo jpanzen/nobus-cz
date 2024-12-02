@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import Notification from "../components/Notification.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Base from "../layouts/Base.astro";
+import Image from "astro/components/Image.astro";
 
 const products = [
   {
@@ -42,8 +43,7 @@ const products = [
 
 	<Notification />
 
-	
-	<div class="flex flex-row w-[1040px] pt-20 pb-10 gap-10 self-center mx-auto">
+	<div class="flex flex-row w-[1040px] pt-20 pb-10 gap-10 mx-auto">
 		{products.map((product) => (
 			<ProductCard 
 			  title={product.title}
@@ -52,5 +52,21 @@ const products = [
 			  image={product.image}
 			/>
 		  ))}
+	</div>
+
+	<div class="flex flex-col items-center w-[1040px] mb-10 mx-auto border border-darkLight p-[30px] gap-5 rounded-[3px] text-center bg-contactGradient">
+		<Image src="/izabella.png" alt="Obchodní zástupkyně" height="146" width="188" class="border-b border-lightBlue"/>
+		<div class="flex flex-col gap-[10px]">
+			<h1 class="text-[44px] font-extrabold text-mediumBlue">Nechte si od nás poradit.<br>ZDARMA!</h1>
+			<p class="max-w-[600px]">Máte jakýkoliv dotaz ohledně produktů? nejste si něčím jisti?<br>Zavolejte nám, nebo klidně napište mail, jsme připraveni Vám s čímkoliv kdykoliv poradit.</p>
+		</div>
+		<div class="flex gap-5 font-medium text-white">
+			<a href="" class="bg-darkBlue px-5 py-[10px] rounded-[3px]">
+				mailto@mailto.cz
+			</a>
+			<a href="" class="bg-darkBlue px-5 py-[10px] rounded-[3px]">
+				+420 123 456 789
+			</a>
+		</div>
 	</div>
 </Base>

@@ -1,0 +1,21 @@
+---
+import Image from "astro/components/Image.astro"
+
+const {title, text, image, link} = Astro.props;
+---
+
+<div class="flex flex-row p-[30px] border border-darkLight rounded-[3px] gap-5">
+	<div class="flex flex-col gap-3 w-full">
+		<div>
+			<h2 class="font-extrabold text-[32px] leading-normal text-mediumBlue">{title}</h2>
+			<p>{text}</p>
+		</div>
+		<a href={link} class="flex flex-row font-bold underline gap-[6px]">
+			<Image src="/linkIcon.svg" width="24" height="24" alt="link icon"/>
+			Více o produktu
+		</a>
+	</div>
+	<div class="flex p-5 w-full items-center">
+		<Image src={image ? image : '/default-image.png'} width="170" height="240" alt="Obrázek produktu"/>
+	</div>
+</div>

@@ -1,7 +1,23 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Notification from "../components/Notification.astro";
+import ProductCard from "../components/ProductCard.astro";
 import Base from "../layouts/Base.astro";
+
+const products = [
+  {
+    title: "Tepelné čerpadlo 1",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laudantium reiciendis molestias impedit! Facilis aperiam, inventore cupiditate error aliquid neque enim.",
+    link: "https://google.com",
+    image: "/nobus-jednotka.png"
+  },
+  {
+    title: "Tepelné čerpadlo 2",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam enim veniam, reiciendis asperiores cupiditate necessitatibus ipsa, eius doloremque officiis eum sint.",
+    link: "https://google.com",
+    image: "/nobus-jednotka.png"
+  }
+];
 ---
 
 <Base>
@@ -17,12 +33,24 @@ import Base from "../layouts/Base.astro";
 				<div class="flex flex-row gap-5 font-semibold">
 					<a href="" class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]">Odebírejte nás</a>
 					<a href="" class="text-white bg-buttonGradient px-5 py-[10px] rounded-[3px] relative">
-						O produktechhhh
+						O produktech
 					</a>
 				</div>
 			</div>
 		</header>
 	</div>
+
 	<Notification />
+
 	
+	<div class="flex flex-row w-[1040px] pt-20 pb-10 gap-10 self-center mx-auto">
+		{products.map((product) => (
+			<ProductCard 
+			  title={product.title}
+			  text={product.text}
+			  link={product.link}
+			  image={product.image}
+			/>
+		  ))}
+	</div>
 </Base>

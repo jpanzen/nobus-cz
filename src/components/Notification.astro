@@ -1,10 +1,10 @@
 ---
-
+const {text} = Astro.props;
 ---
 
 <div class="bg-notificationGradient flex flex-row justify-center text-white py-[6px]">
-    <p>
-        Zaměřujeme se spíše na B2B trh, máte-li zájem o klimatizace či tepelná čerpadla NOBUS pro Váš domov, zkontaktujte B2C dodavatele.
-        <a href="" class="underline text-lightBlue">zde</a>
-    </p>
+	<p>
+		{text}
+		<a href="" class="underline text-lightBlue">zde</a>
+	</p>
 </div>

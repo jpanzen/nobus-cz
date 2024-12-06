@@ -1,0 +1,43 @@
+---
+const {showForm} = Astro.props;
+import Image from "astro/components/Image.astro";
+import MenuLinks from "../components/MenuLinks.astro";
+---
+
+<div class="flex flex-col pt-[60px] pr-[60px] pl-[60px] text-white bg-headerGradient items-center">
+	<div class="flex flex-col pb-20 w-[100%] items-center border-b border-lightestWhite gap-5">
+		<div class="flex flex-col gap-[30px] w-[500px] max-w-[100%]">
+			<h2 class="font-extrabold text-[44px]">Spolupracujte s námi</h2>
+			<p>
+				Jste firma či živnostník, který se věnuje instalaci klimatizací nebo tepelných čerpadel?
+				Rádi bychom s vámi navázali spolupráci! Domluvme si nezávaznou schůzku a možná vás přesvědčíme,
+				že právě NOBUS jsou ty produkty, které nakopnou váš byznys.
+			</p>
+		</div>
+		<form class="flex flex-col w-[500px] gap-[10px] max-w-[100%]" action="">
+			<label for="name" class="hidden">Vaše jméno</label>
+			<input class="w-[100%] rounded-[3px] py-[6px] px-[10px] placeholder-darkMedium text-dark" type="text" id="name" name="name" placeholder="Vaše jméno" required />
+			<label for="email" class="hidden">Váš email</label>
+			<input class="w-[100%] rounded-[3px] py-[6px] px-[10px] placeholder-darkMedium text-dark" type="email" id="email" name="email" placeholder="Váš e-mail" required />
+			<label for="message" class="hidden">Zpráva</label>
+			<textarea class="w-[100%] rounded-[3px] py-[6px] px-[10px] placeholder-darkMedium text-dark" name="message" id="message" placeholder="Vaše zpráva" required />
+			<button class="flex flex-row px-5 py-[10px] rounded-[3px] bg-buttonGradientDark w-fit gap-[10px] items-center font-medium">
+				<Image src="/sendIcon.svg" alt="ikona odeslání" height="16" width="16" />
+				Odeslat
+			</button>
+		</form>
+	</div>
+	
+	<footer class="flex flex-col py-5 items-center">
+		<Image src="/logo-bile.png" alt="logo Nobus" width="100" height="47"/>
+		<ul class="flex flex-row gap-10 py-5 items-center font-semibold">
+			<MenuLinks />
+		</ul>
+		<p class="text-[12px] text-mediumWhite">
+			© 2024 NOBUS. Všechna práva vyhrazena. Vytvořil 
+			<a class="underline text-lightBlue" href="https://panzenberger.cz" target="_blank" >
+				Jan Panzenberger
+			</a>
+		</p>
+	</footer>
+</div>

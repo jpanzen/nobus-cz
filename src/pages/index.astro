@@ -2,6 +2,7 @@
 import Navigation from "../components/Navigation.astro";
 import Notification from "../components/Notification.astro";
 import ProductCard from "../components/ProductCard.astro";
+import Footer from "../components/Footer.astro";
 import Base from "../layouts/Base.astro";
 import Image from "astro/components/Image.astro";
 
@@ -30,10 +31,12 @@ const products = [
 				<h1 class="text-[56px] uppercase line leading-tight text-gradient">Na tuhle klimu<br>se spolehněte</h1>
 			</div>
 			<div class="flex flex-col gap-10 items-center">
-				<p class="max-w-[444px] text-center">Nobus klimatizace přináší rychlé chlazení i vytápění, stylový design pro každý interiér a snadnou instalaci. Vysoká kvalita za dostupnou cenu, vždy skladem v ČR.</p>
+				<p class="max-w-[444px] text-center">
+					Nobus klimatizace přináší rychlé chlazení i vytápění, stylový design pro každý interiér a snadnou instalaci. Vysoká kvalita za dostupnou cenu, vždy skladem v ČR.
+				</p>
 				<div class="flex flex-row gap-5 font-semibold">
 					<a href="" class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]">Odebírejte nás</a>
-					<a href="" class="text-white bg-buttonGradient px-5 py-[10px] rounded-[3px] relative">
+					<a href="" class="text-white bg-buttonGradientDark px-5 py-[10px] rounded-[3px] relative">
 						O produktech
 					</a>
 				</div>
@@ -41,7 +44,7 @@ const products = [
 		</header>
 	</div>
 
-	<Notification />
+	<Notification text="Zaměřujeme se spíše na B2B trh, máte-li zájem o klimatizace či tepelná čerpadla NOBUS pro Váš domov, zkontaktujte B2C dodavatele." />
 
 	<div class="flex flex-row w-[1040px] pt-20 pb-10 gap-10 mx-auto">
 		{products.map((product) => (
@@ -61,12 +64,18 @@ const products = [
 			<p class="max-w-[600px]">Máte jakýkoliv dotaz ohledně produktů? nejste si něčím jisti?<br>Zavolejte nám, nebo klidně napište mail, jsme připraveni Vám s čímkoliv kdykoliv poradit.</p>
 		</div>
 		<div class="flex gap-5 font-medium text-white">
-			<a href="" class="bg-darkBlue px-5 py-[10px] rounded-[3px]">
+			<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
+				<Image src="/mail.svg" alt="ikona mailu" height="16" width="16" />
 				mailto@mailto.cz
 			</a>
-			<a href="" class="bg-darkBlue px-5 py-[10px] rounded-[3px]">
+			<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
+				<Image src="/telefon.svg" alt="ikona telefonu" height="16" width="16" />
 				+420 123 456 789
 			</a>
 		</div>
 	</div>
+
+	<Notification text="Jste přímý zákazník/spotřebitel? Zaměřujeme se na velkoobchod, pro nabídku pro spotřebitele klikněte" />
+
+	<Footer />
 </Base>

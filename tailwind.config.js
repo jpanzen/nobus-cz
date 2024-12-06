@@ -20,7 +20,8 @@ export default {
 			},
 			backgroundImage: {
 				headerGradient: "radial-gradient(circle at top, rgba(52,127,182,1) 0%, rgba(25,69,132,1) 100%);",
-				buttonGradient: "radial-gradient(ellipse at top, rgba(109,133,151,1) 0%, rgba(47,47,47,1) 60%);",
+				buttonGradientDark: "radial-gradient(ellipse at top, rgba(109,133,151,1) 0%, rgba(47,47,47,1) 60%);",
+				buttonGradientBlue: "radial-gradient(ellipse at top, rgba(96, 142, 192, 1) 0%, rgba(25, 69, 132, 1) 60%);",
 				notificationGradient: "linear-gradient(0deg, rgba(47,47,47,1) 0%, rgba(47,47,47,0.85) 100%)",
 				contactGradient: "radial-gradient(circle at top, rgba(171,219,255,0.5) 0%, rgba(255,255,255,1) 100%)"
 			}

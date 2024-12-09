@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import Notification from "../components/Notification.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Footer from "../components/Footer.astro";
+import Accordion from "../components/Accordion.astro";
 import Base from "../layouts/Base.astro";
 import Image from "astro/components/Image.astro";
 
@@ -20,10 +21,21 @@ const products = [
     image: "/nobus-jednotka.png"
   }
 ];
+
+const reasons = [
+	{
+		title: "Reason 1",
+		text: "Reason 1 texttttsadasdasd"
+	},
+	{
+		title: "Reason 2",
+		text: "Reason 1 ssdfdshgdfkokpdskpúsfjtexttttsadasdasd"
+	}
+]
 ---
 
 <Base>
-	<div class="px-14 text-white bg-headerGradient">
+	<div class="px-14 text-white background-w-gradient">
 		<Navigation />
 		<header class="flex flex-col gap-8 py-3 h-[474px] justify-center items-center">
 			<div class="flex flex-col gap-[10px] items-center font-black">
@@ -73,6 +85,15 @@ const products = [
 				+420 123 456 789
 			</a>
 		</div>
+	</div>
+
+	<div class="flex flex-col w-[1040px] pt-10 pb-20 mx-auto gap-5">
+		<h2 class="font-extrabold text-[44px] text-mediumBlue">Proč zrovna Nobus?</h2>
+		{reasons.map(
+			(reason) => (
+				<Accordion title={reason.title} text={reason.text} />
+			)
+		)}
 	</div>
 
 	<Notification text="Jste přímý zákazník/spotřebitel? Zaměřujeme se na velkoobchod, pro nabídku pro spotřebitele klikněte" />

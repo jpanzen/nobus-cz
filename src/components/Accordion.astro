@@ -1,0 +1,39 @@
+---
+import Image from "astro/components/Image.astro";
+const { title, text } = Astro.props;
+---
+
+<div class="flex flex-col border-b border-darkLight py-[10px] gap-5">
+  <div class="flex flex-row justify-between cursor-pointer highlightHover" id="accordion-header">
+    <h3 class="text-[22px] ">{title}</h3>
+    <Image width={24} height={24} alt={"ikona pro rozbalení"} src={"/plusIcon.svg"} class="transition-all"/>
+  </div>
+  <p class="hidden accordion">
+    {text}
+  </p>
+</div>
+
+<script>
+  const headers = document.querySelectorAll("#accordion-header");
+
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling as HTMLElement;
+      const cross = header.lastElementChild as HTMLElement;
+      content.classList.toggle('hidden');
+      cross.classList.toggle('rotated');
+    });
+  });
+</script>
+
+<style>
+	.highlightHover:hover h3 {
+		transition: color 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+		color: #347FB6;
+	}
+
+  .rotated{
+    rotate: 45deg;
+    transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+</style>

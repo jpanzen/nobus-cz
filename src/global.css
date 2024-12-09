@@ -11,4 +11,12 @@
 		-webkit-background-clip: text;
 		color: transparent;
 	  }
+
+	.background-w-gradient{
+		background:
+		url('yyy.svg') 0 0 / 120px 192px repeat,
+		radial-gradient(circle at top, rgba(52,127,182,1) 0%, rgba(25,69,132,1) 100%);
+		background-blend-mode: normal, multiply;
+
+	}
 }

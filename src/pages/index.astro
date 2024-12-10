@@ -58,43 +58,46 @@ const reasons = [
 
 	<Notification text="Zaměřujeme se spíše na B2B trh, máte-li zájem o klimatizace či tepelná čerpadla NOBUS pro Váš domov, zkontaktujte B2C dodavatele." />
 
-	<div class="flex flex-row w-[1040px] pt-20 pb-10 gap-10 mx-auto">
-		{products.map((product) => (
-			<ProductCard 
-			  title={product.title}
-			  text={product.text}
-			  link={product.link}
-			  image={product.image}
-			/>
-		  ))}
+	<div class="flex flex-col w-[1040px] max-w-full px-5 md:px-10 lg:px-0 mx-auto">
+		<div class="flex flex-row w-full pt-20 pb-10 gap-10 mx-auto">
+			{products.map((product) => (
+				<ProductCard 
+				  title={product.title}
+				  text={product.text}
+				  link={product.link}
+				  image={product.image}
+				/>
+			  ))}
+		</div>
+	
+		<div class="flex flex-col items-center w-full mb-10 mx-auto border border-darkLight p-[30px] gap-5 rounded-[3px] text-center bg-contactGradient">
+			<Image src="/izabella.png" alt="Obchodní zástupkyně" height="146" width="188" class="border-b border-lightBlue"/>
+			<div class="flex flex-col gap-[10px]">
+				<h1 class="text-[44px] font-extrabold text-mediumBlue">Nechte si od nás poradit.<br>ZDARMA!</h1>
+				<p class="max-w-[600px]">Máte jakýkoliv dotaz ohledně produktů? nejste si něčím jisti?<br>Zavolejte nám, nebo klidně napište mail, jsme připraveni Vám s čímkoliv kdykoliv poradit.</p>
+			</div>
+			<div class="flex gap-5 font-medium text-white">
+				<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
+					<Image src="/mail.svg" alt="ikona mailu" height="16" width="16" />
+					mailto@mailto.cz
+				</a>
+				<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
+					<Image src="/telefon.svg" alt="ikona telefonu" height="16" width="16" />
+					+420 123 456 789
+				</a>
+			</div>
+		</div>
+	
+		<div class="flex flex-col w-full pt-10 pb-20 mx-auto gap-5">
+			<h2 class="font-extrabold text-[44px] text-mediumBlue">Proč zrovna Nobus?</h2>
+			{reasons.map(
+				(reason) => (
+					<Accordion title={reason.title} text={reason.text} />
+				)
+			)}
+		</div>
 	</div>
 
-	<div class="flex flex-col items-center w-[1040px] mb-10 mx-auto border border-darkLight p-[30px] gap-5 rounded-[3px] text-center bg-contactGradient">
-		<Image src="/izabella.png" alt="Obchodní zástupkyně" height="146" width="188" class="border-b border-lightBlue"/>
-		<div class="flex flex-col gap-[10px]">
-			<h1 class="text-[44px] font-extrabold text-mediumBlue">Nechte si od nás poradit.<br>ZDARMA!</h1>
-			<p class="max-w-[600px]">Máte jakýkoliv dotaz ohledně produktů? nejste si něčím jisti?<br>Zavolejte nám, nebo klidně napište mail, jsme připraveni Vám s čímkoliv kdykoliv poradit.</p>
-		</div>
-		<div class="flex gap-5 font-medium text-white">
-			<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
-				<Image src="/mail.svg" alt="ikona mailu" height="16" width="16" />
-				mailto@mailto.cz
-			</a>
-			<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
-				<Image src="/telefon.svg" alt="ikona telefonu" height="16" width="16" />
-				+420 123 456 789
-			</a>
-		</div>
-	</div>
-
-	<div class="flex flex-col w-[1040px] pt-10 pb-20 mx-auto gap-5">
-		<h2 class="font-extrabold text-[44px] text-mediumBlue">Proč zrovna Nobus?</h2>
-		{reasons.map(
-			(reason) => (
-				<Accordion title={reason.title} text={reason.text} />
-			)
-		)}
-	</div>
 
 	<Notification text="Jste přímý zákazník/spotřebitel? Zaměřujeme se na velkoobchod, pro nabídku pro spotřebitele klikněte" />
 

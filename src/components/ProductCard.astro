@@ -11,11 +11,11 @@ const {title, text, image, link} = Astro.props;
 			<p>{text}</p>
 		</div>
 		<a href={link} class="flex flex-row font-bold underline gap-[6px]">
-			<Image src="/linkIcon.svg" width="24" height="24" alt="link icon"/>
+			<Image loading="eager" src="/linkIcon.svg" width="24" height="24" alt="link icon"/>
 			Více o produktu
 		</a>
 	</div>
 	<div class="flex items-center w-full">
-		<Image src={image ? image : '/default-image.png'} width="170" height="240" alt="Obrázek produktu" class="mx-auto" />
+		<Image loading="eager" src={image ? image : '/default-image.png'} width="170" height="240" alt="Obrázek produktu" class="mx-auto" />
 	</div>
 </div>

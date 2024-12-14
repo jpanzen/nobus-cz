@@ -1,0 +1,48 @@
+---
+import Accordion from "./Accordion.astro"
+
+const reasons = [
+	{
+		title: "Jaké máte servisní zázemí?",
+		text: "Největší zastoupení servisních firem máme v Moravskoslezském kraji. Servisní síť máme zajistěnou však pro každý kraj po celé ČR."
+	},
+	{
+		title: "Jak rychle funguje dodání náhradních dílů? Máte je skladem?",
+		text: "Náhradní díly držíme skladem a u Vás budou do 24 hodin."
+	},
+	{
+		title: "V čem vidíte největší výhody tepelných čerpadel Nobus?",
+		text:`Jsou velmi kvalitní, tichá zařízení obsahující komponenty světových značek (kompresor Mitsubishi,
+			motor Panasonic, tepelný výměník Alfa Laval, vodní čerpadla Willo nebo Shimge) za velmi příznivé
+			ceny. Dodáváme kompletní balíček, včetně veškerého potřebného příslušenství. V případě zájmu
+			jsme schopné tepelné čerpadlo i dopravit na místo.`
+	},
+	{
+		title: "Jaká je hlučnost zařízení?",
+		text: "Hlučnost závisí od navržené jednotky. Pohybuje se mezi 56 – 68 dB. Lze zapnout noční/tichý režim, kde jednotka nepřesáhne 50 dB."
+	},
+	{
+		title: "Je možné vybavit dotace na Nobus?",
+		text: "Tepelné čerpadlo se dá ovládat přes pokojový termostat, dále skrze mobilní telefon prostřednictvím mobilní aplikace či přes panel umístěný na jednotce."
+	},
+	{
+		title: "Jak je to se zárukou?",
+		text: "Tepelné čerpadlo se dá ovládat přes pokojový termostat, dále skrze mobilní telefon prostřednictvím mobilní aplikace či přes panel umístěný na jednotce."
+	},
+	{
+		title: "Dají se tepelná čerpadla NOBUS propojit s chytrou domácností?",
+		text: "Tepelné čerpadlo se dá ovládat přes pokojový termostat, dále skrze mobilní telefon prostřednictvím mobilní aplikace či přes panel umístěný na jednotce."
+	}
+]
+---
+
+<div class="flex flex-col w-[1040px] max-w-full pt-10 pb-20 mx-auto gap-5">
+	<div class="font-extrabold text-[44px] text-mediumBlue">
+		<slot />
+	</div>
+	{reasons.map(
+		(reason) => (
+			<Accordion title={reason.title} text={reason.text} />
+		)
+	)}
+</div>

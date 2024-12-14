@@ -1,0 +1,92 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Notification from "../components/Notification.astro";
+import Footer from "../components/Footer.astro";
+import Base from "../layouts/Base.astro";
+import Faq from "../components/faq.astro";
+---
+
+<Base>
+	<div class="text-white background-w-gradient w-[100%] overflow-hidden">
+		<Navigation />
+		<header class="flex flex-col py-20 px-5 mx-auto w-[1040px] max-w-full">
+			<h1 class="sm:text-[56px] text-[44px] uppercase line leading-tight text-gradient font-black">O značce<br>Nobus</h1>
+		</header>
+	</div>
+	<Notification text="Zaměřujeme se spíše na B2B trh, máte-li zájem o klimatizace či tepelná čerpadla NOBUS pro Váš domov, zkontaktujte B2C dodavatele." />
+
+	<div class="flex flex-col py-20 px-5 mx-auto w-[1040px] max-w-full gap-5 text-justify leading-6">
+		<h2 class="font-extrabold text-mediumBlue text-3xl">Co je to NOBUS?</h2>
+		<p>Tepelná čerpadla značky NOBUS s dlouholetou tradicí působící na evropském trhu jsou
+			certifikovány, pečlivě testovány, a splňují požadavky EU. V posledních letech se zvyšuje
+			zájem o zařízení šetrná k životnímu prostředí a abychom uspokojili poptávku na trhu, rozvinula
+			naše společnost technologii tepelného čerpadla značky NOBUS takovým způsobem, aby byly
+			vyráběny jen ty nejúčinnější produkty šetrné k životnímu prostředí. Využívá ekologické chladivo
+			R32, které se snadno recykluje. NOBUS nabízí systém tepelného čerpadla typu monoblok či split.
+			Disponuje systémem vzduch-voda, které potřebuje pouze malé množství elektrické energie k
+			provozu kompresoru a motoru ventilátoru.
+		</p>
+		<h2 class="font-extrabold text-mediumBlue text-3xl">Co naše TČ umí?</h2>
+		<p>Tepelné čerpadlo NOBUS využívá systému vzduchu-voda. Tento systém přeměňuje teplo ze vzduchu
+			na teplo v tekutině, obvykle vodě, kterou následně využíváme pro vytápění budov nebo ohřev vody.
+			Funguje na principu termodynamického cyklu, který zahrnuje čtyři základní fáze:
+		</p>
+		<div class="flex flex-row gap-3 flex-wrap justify-evenly w-full">
+			<div class="flex flex-row border border-darkLight p-3 rounded bg-[#F5F5F5] text-[24px] text-mediumBlue font-medium grow">1. Absorpce Tepla</div>
+			<div class="flex flex-row border border-darkLight p-3 rounded bg-[#F5F5F5] text-[24px] text-mediumBlue font-medium grow">2. Stlačení</div>
+			<div class="flex flex-row border border-darkLight p-3 rounded bg-[#F5F5F5] text-[24px] text-mediumBlue font-medium grow">3. Kondenzace</div>
+			<div class="flex flex-row border border-darkLight p-3 rounded bg-[#F5F5F5] text-[24px] text-mediumBlue font-medium grow">4. Expanze</div>
+		</div>
+		<ol class="flex flex-col gap-5 list-decimal ml-4 text-mediumBlue font-bold">
+			<li>Absorpce - <span class="text-black font-normal">Tepelné čerpadlo nasává venkovní vzduch pomocí ventilátoru. I když
+				venkovní teplota může být nízká, vzduch stále obsahuje určité množství tepelné energie. Tato
+				energie se absorbuje do chladiva, které má nízký bod varu.</span></li>
+			<li>Stlačení - <span class="text-black font-normal">Chladivo, které nyní obsahuje teplo, je ve válci kompresoru stlačeno. Stlačením se
+				zvyšuje jeho tlak a teplota.</span></li>
+			<li>Kondenzace - <span class="text-black font-normal">Vysokotlaké a teplé chladivo poté prochází kondenzátorem, kde předává teplo
+				do vody v otopném systému (např. do radiátorů nebo podlahového topení). Chladivo se při
+				tomto procesu ochladí a změní se zpět na kapalinu.</span></li>
+			<li>Expanze - <span class="text-black font-normal">Chladivo pak prochází expanzním ventilem, kde se jeho tlak sníží. Snížením tlaku
+				chladivo opět klesá na nízkou teplotu a cyklus se opakuje.</span></li>
+		</ol>
+		<h2 class="font-extrabold text-mediumBlue text-3xl" id="proc-nobus">Proč zvolit NOBUS?</h2>
+		<ol class="flex flex-col gap-5 list-decimal ml-4 text-mediumBlue font-bold">
+			<li>TČ NOBUS splňují všechny podmínky pro dotace</li>
+			<li>Přední značkové komponenty - <span class="text-black font-normal">Kompresor Mitsubishi, ventilátor s motorem Panasonic, výměník tepla Alfa Laval,
+				vodní čerpadlo Wilo/Shimge), elektrický záložní ohřívač 3 kW v ceně.</span></li>
+			<li>Multifunkční kabelový ovladač a ovládání pomocí APP (Smart Life) v ceně. - <span class="text-black font-normal">Zabudovaný wifi modul podporuje ovládání aplikace.</span></li>
+			<li>Extrémně tichý provoz - <span class="text-black font-normal">Dvě úrovně tichého režimu zajišťují lepší komfort. Minimální hladina akustického výkonu
+				tichého režimu 55dB</span></li>
+			<li>Ovládání dvou zón - <span class="text-black font-normal">Díky funkci ovládání dvou zón mohou různé vnitřní koncové jednotky pracovat při
+				svých vlastních návrhových teplotách. Což zvyšuje komfort a snižuje spotřebu
+				energie.</span></li>
+			<li>Nabízené modely od 6 - 16 KW s ekologickým chladivem R32</li>
+			<li>Vše pro pohodlnou instalaci. Dodáván kompletní set k instalaci k tepelného
+				čerpadla NOBUS! - <span class="text-black font-normal">Včetně akumulační nádrže, bojleru, expanzní nádoby, oběhového čerpadla,
+					antimagnetického filtru, 3cestného ventilu a ostatních potřebných příslušenství.</span></li>
+		</ol>
+		<h2 class="font-extrabold text-mediumBlue text-3xl">Jak získat NOBUS?</h2>
+		<p>V případě zájmu, nás neváhejte nezávazně kontaktovat na <a class="font-medium text-mediumBlue underline" href="#contact-form">našem kontaktním formuláři</a> či rovnou email: <a class="font-medium text-mediumBlue underline" href="mailto:obchod@oneklima.cz">obchod@oneklima.cz</a> nebo
+			telefonní číslo <a class="font-medium text-mediumBlue underline" href="tel:+420 725 001 282">725 001 282</a>. Více naleznete v kontaktní sekci na naší webové stránce:
+			<a class="font-medium text-mediumBlue underline" href="https://oneklima.cz/kontakt" target="_blank">https://oneklima.cz/kontakt</a>.</p>
+		<p>Poskytujeme bezplatné poradenství. V případě zájmu, jsme Vám schopni navrhnout na základě
+			projektové dokumentace vhodné tepelné řešení speciálně pro Vás. Nabízíme možnost doporučení
+			ověřené montážní i servisní firmy.</p>
+		<h2 class="font-extrabold text-mediumBlue text-3xl">Co vše NOBUS splňuje?</h2>
+		<p>Tepelná čerpadla NOBUS splňují podmínky pro získání dotace. Jednotky jsou certifikované, testované
+			a splňují požadavky EU.</p>
+		<p>NOBUS také představuje obrovské finanční výhody. Nejenže disponuje energetickou účinností A+++,
+			ale také díky vysokému topnému faktoru (COP) Vám tepelné čerpadlo vzduch-voda ušetří spoustu
+			peněz za každoroční účty za spotřebu paliv.</p>
+		<p>Tepelné čerpadlo vzduch-voda sníží Vaši uhlíkovou stopu, jelikož nepoužívá nebo k výrobě tepla
+			přímo proces spalování. NOBUS je také šetrný k životnímu prostředí, jelikož využívá ekologické
+			chladivo R32.</p>
+		<Faq>
+			<h2 class="text-3xl">Často kladené otázky</h2>
+		</Faq>
+	</div>
+
+	<Notification text="Jste přímý zákazník/spotřebitel? Zaměřujeme se na velkoobchod, pro nabídku pro spotřebitele klikněte" />
+
+	<Footer />
+</Base>

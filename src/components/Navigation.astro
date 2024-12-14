@@ -5,24 +5,26 @@ import MenuLinks from "./MenuLinks.astro"
 
 <nav class="flex flex-col border-b border-lightestWhite justify-between font-semibold py-2 px-5 md:px-10 lg:mx-14 lg:px-0">
 	<div class="flex flex-row justify-between">
-		<a href="www.google.com">
-			<Image src="/logo-bile.png" width="100" height="47" alt="logo NOBUS" />
+		<a href="/">
+			<Image loading="eager" src="/logo-bile.png" width="100" height="47" alt="logo NOBUS" />
 		</a>
 		<ul class="hidden lg:flex flex-row gap-10 items-center">
 			<MenuLinks />
-			<li><a class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]" href="">Odebírejte nás</a></li>
+			<li><a class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]" href="#contact-form">Odebírejte nás</a></li>
 		</ul>
-		<Image class="lg:hidden cursor-pointer" src="/burgerIcon.svg" width="24" height="24" alt="mobile menu button" id="burger-button"/>
+		<Image loading="eager" class="lg:hidden cursor-pointer" src="/burgerIcon.svg" width="24" height="24" alt="mobile menu button" id="burger-button"/>
 	</div>
 
 	<div class="fixed flex flex-col w-full h-[100%] top-0 left-0 z-10 hidden background-w-gradient" id="burger-menu">
 		<div class="h-[65px] flex flex-row justify-between items-center px-5 md:px-10 pb-[1px]">
-			<Image src="/logo-bile.png" width="100" height="47" alt="logo NOBUS" />
-			<Image src="/closeIcon.svg" width="24" height="24" alt="mobile menu button" id="burger-button" class="cursor-pointer"/>
+			<a href="/">
+				<Image loading="eager" src="/logo-bile.png" width="100" height="47" alt="logo NOBUS" />
+			</a>
+			<Image loading="eager" src="/closeIcon.svg" width="24" height="24" alt="mobile menu button" id="burger-button" class="cursor-pointer"/>
 		</div>
 		<ul class="flex flex-col p-5 md:p-10 gap-5 text-[22px]">
 			<MenuLinks />
-			<li><a class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]" href="">Odebírejte nás</a></li>
+			<li><a class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]" href="#contact-form">Odebírejte nás</a></li>
 		</ul>
 	</div>
 </nav>

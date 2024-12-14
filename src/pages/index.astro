@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import Notification from "../components/Notification.astro";
 import ProductCard from "../components/ProductCard.astro";
 import Footer from "../components/Footer.astro";
-import Accordion from "../components/Accordion.astro";
+import Faq from "../components/faq.astro";
 import Base from "../layouts/Base.astro";
 import Image from "astro/components/Image.astro";
 
@@ -21,40 +21,6 @@ const products = [
     image: "/nobus-jednotka.png"
   }
 ];
-
-const reasons = [
-	{
-		title: "Jaké máte servisní zázemí?",
-		text: "Největší zastoupení servisních firem máme v Moravskoslezském kraji. Servisní síť máme zajistěnou však pro každý kraj po celé ČR."
-	},
-	{
-		title: "Jak rychle funguje dodání náhradních dílů? Máte je skladem?",
-		text: "Náhradní díly držíme skladem a u Vás budou do 24 hodin."
-	},
-	{
-		title: "V čem vidíte největší výhody tepelných čerpadel Nobus?",
-		text:`Jsou velmi kvalitní, tichá zařízení obsahující komponenty světových značek (kompresor Mitsubishi,
-			motor Panasonic, tepelný výměník Alfa Laval, vodní čerpadla Willo nebo Shimge) za velmi příznivé
-			ceny. Dodáváme kompletní balíček, včetně veškerého potřebného příslušenství. V případě zájmu
-			jsme schopné tepelné čerpadlo i dopravit na místo.`
-	},
-	{
-		title: "Jaká je hlučnost zařízení?",
-		text: "Hlučnost závisí od navržené jednotky. Pohybuje se mezi 56 – 68 dB. Lze zapnout noční/tichý režim, kde jednotka nepřesáhne 50 dB."
-	},
-	{
-		title: "Je možné vybavit dotace na Nobus?",
-		text: "Tepelné čerpadlo se dá ovládat přes pokojový termostat, dále skrze mobilní telefon prostřednictvím mobilní aplikace či přes panel umístěný na jednotce."
-	},
-	{
-		title: "Jak je to se zárukou?",
-		text: "Tepelné čerpadlo se dá ovládat přes pokojový termostat, dále skrze mobilní telefon prostřednictvím mobilní aplikace či přes panel umístěný na jednotce."
-	},
-	{
-		title: "Dají se tepelná čerpadla NOBUS propojit s chytrou domácností?",
-		text: "Tepelné čerpadlo se dá ovládat přes pokojový termostat, dále skrze mobilní telefon prostřednictvím mobilní aplikace či přes panel umístěný na jednotce."
-	}
-]
 ---
 
 <Base>
@@ -70,8 +36,8 @@ const reasons = [
 					Nobus klimatizace přináší rychlé chlazení i vytápění, stylový design pro každý interiér a snadnou instalaci. Vysoká kvalita za dostupnou cenu, vždy skladem v ČR.
 				</p>
 				<div class="flex flex-row flex-wrap gap-5 font-semibold">
-					<a href="" class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]">Odebírejte nás</a>
-					<a href="" class="text-white bg-buttonGradientDark px-5 py-[10px] rounded-[3px] relative">
+					<a href="#contact-form" class="text-mediumBlue bg-white px-5 py-[10px] rounded-[3px]">Odebírejte nás</a>
+					<a href="/co-je-nobus" class="text-white bg-buttonGradientDark px-5 py-[10px] rounded-[3px] relative">
 						O produktech
 					</a>
 				</div>
@@ -82,7 +48,7 @@ const reasons = [
 	<Notification text="Zaměřujeme se spíše na B2B trh, máte-li zájem o klimatizace či tepelná čerpadla NOBUS pro Váš domov, zkontaktujte B2C dodavatele." />
 
 	<div class="flex flex-col w-[1040px] max-w-full px-5 md:px-10 lg:px-0 mx-auto">
-		<div class="flex flex-col lg:flex-row w-full pt-20 pb-10 gap-10 mx-auto">
+		<div class="flex flex-col lg:flex-row w-full pt-20 pb-10 gap-10 mx-auto" id="produkty">
 			{products.map((product) => (
 				<ProductCard 
 				  title={product.title}
@@ -94,34 +60,27 @@ const reasons = [
 		</div>
 	
 		<div class="flex flex-col items-center w-full mb-10 mx-auto border border-darkLight p-[30px] gap-5 rounded-[3px] text-center bg-contactGradient">
-			<Image src="/izabella.png" alt="Obchodní zástupkyně" height="146" width="188" class="border-b border-lightBlue"/>
+			<Image loading="lazy" src="/izabella.png" alt="Obchodní zástupkyně" height="146" width="188" class="border-b border-lightBlue"/>
 			<div class="flex flex-col gap-[10px]">
 				<h1 class="text-[44px] font-extrabold text-mediumBlue">Nechte si od nás poradit.<br>ZDARMA!</h1>
 				<p class="max-w-[600px]">Máte jakýkoliv dotaz ohledně produktů? nejste si něčím jisti?<br>Zavolejte nám, nebo klidně napište mail, jsme připraveni Vám s čímkoliv kdykoliv poradit.</p>
 			</div>
 			<div class="flex flex-col lg:flex-row gap-5 font-medium text-white">
-				<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
-					<Image src="/mail.svg" alt="ikona mailu" height="16" width="16" />
-					mailto@mailto.cz
+				<a href="mailto:obchod@oneklima.cz" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
+					<Image loading="lazy" src="/mail.svg" alt="ikona mailu" height="16" width="16" />
+					obchod@oneklima.cz
 				</a>
-				<a href="" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
-					<Image src="/telefon.svg" alt="ikona telefonu" height="16" width="16" />
-					+420 123 456 789
+				<a href="tel:+420725001282" class="flex flex-row bg-darkBlue px-5 py-[10px] rounded-[3px] gap-[10px] bg-buttonGradientBlue">
+					<Image loading="lazy" src="/telefon.svg" alt="ikona telefonu" height="16" width="16" />
+					+420 725 001 282
 				</a>
 			</div>
 		</div>
-	
-		<div class="flex flex-col w-full pt-10 pb-20 mx-auto gap-5">
-			<h2 class="font-extrabold text-[44px] text-mediumBlue">Proč zrovna Nobus?</h2>
-			{reasons.map(
-				(reason) => (
-					<Accordion title={reason.title} text={reason.text} />
-				)
-			)}
-		</div>
 	</div>
 
-
+	<Faq>
+		<h2>Často kladené otázky</h2>
+	</Faq>
 	<Notification text="Jste přímý zákazník/spotřebitel? Zaměřujeme se na velkoobchod, pro nabídku pro spotřebitele klikněte" />
 
 	<Footer />

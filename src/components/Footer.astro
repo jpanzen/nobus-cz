@@ -14,17 +14,14 @@ import MenuLinks from "../components/MenuLinks.astro";
 				že právě NOBUS jsou ty produkty, které nakopnou váš byznys.
 			</p>
 		</div>
-		<form class="flex flex-col w-[500px] gap-[10px] max-w-[100%]" id="contact-form" action="">
+		<form class="flex flex-col w-[500px] gap-[10px] max-w-[100%]" id="contact-form" action="https://submit-form.com/e12WDGFjg">
 			<label for="name" class="hidden">Vaše jméno</label>
 			<input class="w-[100%] rounded-[3px] py-[6px] px-[10px] placeholder-darkMedium text-dark" type="text" id="name" name="name" placeholder="Vaše jméno" required />
 			<label for="email" class="hidden">Váš email</label>
 			<input class="w-[100%] rounded-[3px] py-[6px] px-[10px] placeholder-darkMedium text-dark" type="email" id="email" name="email" placeholder="Váš e-mail" required />
 			<label for="message" class="hidden">Zpráva</label>
 			<textarea class="w-[100%] rounded-[3px] py-[6px] px-[10px] placeholder-darkMedium text-dark" name="message" id="message" placeholder="Vaše zpráva" required />
-			<button class="flex flex-row px-5 py-[10px] rounded-[3px] bg-buttonGradientDark w-fit gap-[10px] items-center font-medium">
-				<Image src="/sendIcon.svg" alt="ikona odeslání" height="16" width="16" />
-				Odeslat
-			</button>
+			<input type="submit" class="flex flex-row px-5 py-[10px] rounded-[3px] bg-buttonGradientDark w-fit gap-[10px] items-center font-medium" value="Odeslat">
 		</form>
 	</div>
 	
